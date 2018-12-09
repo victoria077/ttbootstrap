@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+        <script>
+                function change(objName, min, max, step) {
+                var obj = document.getElementById(objName);
+                var tmp = +obj.value + step;
+                if (tmp<min) tmp=min;
+                if (tmp>max) tmp=max;
+                obj.value = tmp;
+                }
+                </script>
+</head>
+
+<body>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 product-grid text-center">
+                <div class="image">
+                    <a href="#">
+                        <img class="w-100" src="http://cdn.shopify.com/s/files/1/0808/0067/products/apple_watch_ta_detail_14_gunmetal_grande.jpg?v=1507671799"
+                            alt="Watch">
+                    </a>
+                </div>
+                <h4 class="text-center title">Product Title</h4>
+                <h5 class="text-center price">100$</h5>
+                <button type="button" class=" buy" data-toggle="modal" data-target="#myModal">Add to card</button>
+            </div>
+            <div class="col-md-4 product-grid text-center">
+                <div class="image">
+                    <a href="#">
+                        <img class="w-100" src="http://cdn.shopify.com/s/files/1/0808/0067/products/apple_watch_ta_detail_14_gunmetal_grande.jpg?v=1507671799"
+                            alt="Watch">
+                    </a>
+                </div>
+                <h4 class="text-center title">Product Title</h4>
+                <h5 class="text-center price">100$</h5>
+                <button type="button" class=" buy" data-toggle="modal" data-target="#myModal">Add to card</button>
+            </div>
+            <div class="col-md-4 product-grid text-center">
+                <div class="image">
+                    <a href="#">
+                        <img class="w-100" src="http://cdn.shopify.com/s/files/1/0808/0067/products/apple_watch_ta_detail_14_gunmetal_grande.jpg?v=1507671799"
+                            alt="Watch">
+                    </a>
+                </div>
+                <h4 class="text-center title">Product Title</h4>
+                <h5 class="text-center price">100$</h5>
+                <button type="button" class="buy" data-toggle="modal" data-target="#myModal">Add to card</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div col-md-6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="image">
+                                    <a href="#">
+                                        <img class="w-100" src="http://cdn.shopify.com/s/files/1/0808/0067/products/apple_watch_ta_detail_14_gunmetal_grande.jpg?v=1507671799"
+                                            alt="Watch">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Product Title</h3>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Size</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Small</option>
+                                            <option>Medium</option>
+                                            <option>Large</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Color</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Green</option>
+                                            <option>Red</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="button" value="+" onClick="change('amount',0,10, 1);"/>
+                                            <input id="amount" type="text" value="1"/>
+                                            <input type="button" value="-" onClick="change('amount',0,10,-1);"/>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <h4>Total Price:<strong>100$</strong></h4>
+                                <button type="button" class="btn bg-warning text-white m-3 pl-4 pr-4 pt-2 pb-2">Add to card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
