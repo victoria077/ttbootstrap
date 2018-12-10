@@ -5,6 +5,8 @@
 .product-grid{
     padding-bottom: 20px;
     padding-top: 20px;
+    transition: 0.7s ease;
+    margin-top: 50px;
 }
 
 
@@ -19,17 +21,17 @@
     padding-bottom: 20px;
 }
 
-.product-grid .buy{
+.product-grid .add{
     display: none;
+    margin: auto;
+    padding: 10px 20px;
     background-color: orange;
     color: white;
+    border: none;
     border-radius: 4px;
-    border: 1px solid black;
-    padding: 7px 15px;
-    margin-left: 35%;
 }
 
-.product-grid:hover .buy{
+.product-grid:hover .add{
     display: block;
 }
 
