@@ -19,9 +19,10 @@
 </head>
 
 <body>
+    <input type='hidden' name='selected-product' />
     <div class="container">
         <div class="row">
-            <div class="col-md-4 product-grid text-center">
+            <div class="col-md-4 product-grid text-center order" id="101">
                 <div class="image">
                     <a href="#">
                         <img class="w-100" src="https://b34959663f5a3997bd0d-2668915a1d3a077262c88fab6aa0aa02.ssl.cf3.rackcdn.com/17381084_1_640.jpg"
@@ -30,7 +31,7 @@
                 </div>
                 <h4 class="text-center title">Product Title</h4>
                 <h5 class="text-center price">100$</h5>
-                <button type="button" class="add" data-toggle="modal" data-target="#myModal">Add to
+                <button type="button" class="add" data-toggle="modal" data-target="#myModal" id="101">Add to
                     card</button>
                 <div>
                     <div class="modal fade" id="myModal">
@@ -48,6 +49,146 @@
                                                 <div class="image">
                                                     <a href="#">
                                                         <img class="w-100" src="https://b34959663f5a3997bd0d-2668915a1d3a077262c88fab6aa0aa02.ssl.cf3.rackcdn.com/17381084_1_640.jpg"
+                                                            alt="Watch">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3>Product Title</h3>
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="size">Size</label>
+                                                        <select class="form-control size">
+                                                            <option>small</option>
+                                                            <option>medium</option>
+                                                            <option>large</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="color">Color</label>
+                                                        <select class="form-control color">
+                                                            <option>green</option>
+                                                            <option>red</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="button" value="+" onClick="change('amount',0,10, 1);" />
+                                                        <input class="amount" type="text" value="1" />
+                                                        <input type="button" value="-" onClick="change('amount',0,10,-1);" />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-12 text-center">
+                                                <h4>Total Price: <strong class="total">100$</strong></h4>
+                                                <button type="button" class="addprice btn bg-warning text-white m-3 pl-4 pr-4 pt-2 pb-2">Add
+                                                    to
+                                                    card</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-grid text-center order" id="102">
+                <div class="image">
+                    <a href="#">
+                        <img class="w-100" src="https://b34959663f5a3997bd0d-2668915a1d3a077262c88fab6aa0aa02.ssl.cf3.rackcdn.com/17381175_1_640.jpg"
+                            alt="Watch">
+                    </a>
+                </div>
+                <h4 class="text-center title">Product Title</h4>
+                <h5 class="text-center price">100$</h5>
+                <button type="button" class="add" data-toggle="modal" data-target="#myModal1" id='102'>Add to
+                    card</button>
+                <div>
+                    <div class="modal fade" id="myModal1">
+                        <div class="modal-dialog modal-dialog-centered">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div col-md-6>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img class="w-100" src="https://b34959663f5a3997bd0d-2668915a1d3a077262c88fab6aa0aa02.ssl.cf3.rackcdn.com/17381175_1_640.jpg"
+                                                            alt="Watch">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3>Product Title</h3>
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="size">Size</label>
+                                                        <select class="form-control" class="size">
+                                                            <option>small</option>
+                                                            <option>medium</option>
+                                                            <option>large</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="color">Color</label>
+                                                        <select class="form-control" id="color1">
+                                                            <option>green</option>
+                                                            <option>red</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="button" value="+" onClick="change('amount',0,10, 1);" />
+                                                        <input id="amount1" type="text" value="1" />
+                                                        <input type="button" value="-" onClick="change('amount',0,10,-1);" />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-12 text-center">
+                                                <h4>Total Price: <strong id="total1">100$</strong></h4>
+                                                <button type="button" class="btn bg-warning text-white m-3 pl-4 pr-4 pt-2 pb-2">Add
+                                                    to
+                                                    card</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-grid text-center order" id="103">
+                <div class="image">
+                    <a href="#">
+                        <img class="w-100" src="https://b34959663f5a3997bd0d-2668915a1d3a077262c88fab6aa0aa02.ssl.cf3.rackcdn.com/17170385_1_640.jpg"
+                            alt="Watch">
+                    </a>
+                </div>
+                <h4 class="text-center title">Product Title</h4>
+                <h5 class="text-center price">100$</h5>
+                <button type="button" class="add" data-toggle="modal" data-target="#myModal2" id="103">Add to
+                    card</button>
+                <div>
+                    <div class="modal fade" id="myModal2">
+                        <div class="modal-dialog modal-dialog-centered">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div col-md-6>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img class="w-100" src="https://b34959663f5a3997bd0d-2668915a1d3a077262c88fab6aa0aa02.ssl.cf3.rackcdn.com/17170385_1_640.jpg"
                                                             alt="Watch">
                                                     </a>
                                                 </div>
@@ -91,69 +232,74 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product-grid text-center">
-                <div class="image">
-                    <a href="#">
-                        <img class="w-100" src="https://b34959663f5a3997bd0d-2668915a1d3a077262c88fab6aa0aa02.ssl.cf3.rackcdn.com/17381175_1_640.jpg"
-                            alt="Watch">
-                    </a>
-                </div>
-                <h4 class="text-center title">Product Title</h4>
-                <h5 class="text-center price">100$</h5>
-                <button type="button" class="add" data-toggle="modal" data-target="#myModal">Add to
-                    card</button>
-                <div>
 
-                </div>
-            </div>
-
-            <div class="col-md-4 product-grid text-center">
-                <div class="image">
-                    <a href="#">
-                        <img class="w-100" src="https://b34959663f5a3997bd0d-2668915a1d3a077262c88fab6aa0aa02.ssl.cf3.rackcdn.com/17170385_1_640.jpg"
-                            alt="Watch">
-                    </a>
-                </div>
-                <h4 class="text-center title">Product Title</h4>
-                <h5 class="text-center price">100$</h5>
-                <button type="button" class="add" data-toggle="modal" data-target="#myModal">Add to
-                    card</button>
-            </div>
         </div>
+    </div>
     </div>
 
 
-    <script>
+    <script type="text/javascript">
+
         const prices = {
-            'small:green': 100,
-            'small:red': 150,
-            'medium:green': 200,
-            'medium:red': 250,
-            'large:green': 300,
-            'large:red': 350
-        }
+            101: {
+                "small: green": 100,
+                "small: red": 150,
+                "medium: green": 200,
+                "medium: red": 250,
+                "large: green": 300,
+                "large: red": 350,
+            },
+            102: {
+                "small: green": 100,
+                "small: red": 150,
+                "medium: green": 200,
+                "medium: red": 250,
+                "large: green": 300,
+                "large: red": 350,
+            },
+            103: {
+                "small: green": 100,
+                "small: red": 150,
+                "medium: green": 200,
+                "medium: red": 250,
+                "large: green": 300,
+                "large: red": 350,
+            }
+        };
+
+        $(document).ready(function () {
+            $(".add").click(function () {
+                number = $(this).attr("id");
+                $("[name='selected-product']").val(number)
+            })
+            $("select").change(recalc);
+        });
 
         function recalc() {
-            const
-                size = document.querySelector('#size').value,
-                color = document.querySelector('#color').value,
-                amount = document.querySelector('#amount').value;
 
-            document.querySelector('#total').textContent = `${prices[`${size}:${color}`] * amount} р.`;
-        }
+            let
+                size = $('.show .size').val(),
+                color = $('.show .color').val(),
+                number = $("[name='selected-product']").val(),
+                amount = $('.show .amount').val();
+                let s1 =`${size}: ${color}`;
+                let s2 = "small: red";
+                total = prices[number][`${size}: ${color}`] * amount;
 
-        recalc();
+            $('.show .total').text(`${total} р.`);
 
-        document.querySelector('form').addEventListener('change', recalc);
+        };
+        
+        $('form').on('change', recalc);
 
         function change(objName, min, max, step) {
-            var obj = document.getElementById(objName);
+            var obj = $(objName);
             var tmp = +obj.value + step;
             if (tmp < min) tmp = min;
             if (tmp > max) tmp = max;
             obj.value = tmp;
             recalc();
-        }
+        };
     </script>
 </body>
 
