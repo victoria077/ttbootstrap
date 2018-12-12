@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
@@ -22,6 +21,8 @@
     <input type='hidden' name='selected-product' />
     <div class="container">
         <div class="row">
+
+            <!--Product-->
             <div class="col-md-4 product-grid text-center order" id="101">
                 <div class="image">
                     <a href="#">
@@ -34,10 +35,10 @@
                 <button type="button" class="add" data-toggle="modal" data-target="#myModal" id="101">Add to
                     card</button>
                 <div>
+
+                    <!-- Modal content-->
                     <div class="modal fade" id="myModal">
                         <div class="modal-dialog modal-dialog-centered">
-
-                            <!-- Modal content-->
                             <div class="modal-content">
                                 <div col-md-6>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -58,7 +59,7 @@
                                                 <form>
                                                     <div class="form-group">
                                                         <label for="size">Size</label>
-                                                        <select class="form-control size">
+                                                        <select class="form-control size change">
                                                             <option>small</option>
                                                             <option>medium</option>
                                                             <option>large</option>
@@ -66,15 +67,15 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="color">Color</label>
-                                                        <select class="form-control color">
+                                                        <select class="form-control color change">
                                                             <option>green</option>
                                                             <option>red</option>
                                                         </select>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <input type="button" value="+" onClick="change('amount',0,10, 1);" />
-                                                        <input class="amount" type="text" value="1" />
-                                                        <input type="button" value="-" onClick="change('amount',0,10,-1);" />
+                                                    <div class="number change">
+                                                        <button class="plus">+</button>
+                                                        <input class="amount" type="text" value="1" size="5" />
+                                                        <button class="minus">-</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -92,6 +93,9 @@
                     </div>
                 </div>
             </div>
+
+
+            <!--Product-->
             <div class="col-md-4 product-grid text-center order" id="102">
                 <div class="image">
                     <a href="#">
@@ -128,7 +132,7 @@
                                                 <form>
                                                     <div class="form-group">
                                                         <label for="size">Size</label>
-                                                        <select class="form-control" class="size">
+                                                        <select class="form-control size change">
                                                             <option>small</option>
                                                             <option>medium</option>
                                                             <option>large</option>
@@ -136,20 +140,20 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="color">Color</label>
-                                                        <select class="form-control" id="color1">
+                                                        <select class="form-control color change">
                                                             <option>green</option>
                                                             <option>red</option>
                                                         </select>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <input type="button" value="+" onClick="change('amount',0,10, 1);" />
-                                                        <input id="amount1" type="text" value="1" />
-                                                        <input type="button" value="-" onClick="change('amount',0,10,-1);" />
+                                                    <div class="number change">
+                                                        <button class="plus">+</button>
+                                                        <input class="amount" type="text" value="1" size="5" />
+                                                        <button class="minus">-</button>
                                                     </div>
                                                 </form>
                                             </div>
                                             <div class="col-md-12 text-center">
-                                                <h4>Total Price: <strong id="total1">100$</strong></h4>
+                                                <h4>Total Price: <strong class="total">100$</strong></h4>
                                                 <button type="button" class="btn bg-warning text-white m-3 pl-4 pr-4 pt-2 pb-2">Add
                                                     to
                                                     card</button>
@@ -162,6 +166,8 @@
                     </div>
                 </div>
             </div>
+
+            <!--Product-->
             <div class="col-md-4 product-grid text-center order" id="103">
                 <div class="image">
                     <a href="#">
@@ -198,7 +204,7 @@
                                                 <form>
                                                     <div class="form-group">
                                                         <label for="size">Size</label>
-                                                        <select class="form-control" id="size">
+                                                        <select class="form-control size change">
                                                             <option>small</option>
                                                             <option>medium</option>
                                                             <option>large</option>
@@ -206,20 +212,20 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="color">Color</label>
-                                                        <select class="form-control" id="color">
+                                                        <select class="form-control color change">
                                                             <option>green</option>
                                                             <option>red</option>
                                                         </select>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <input type="button" value="+" onClick="change('amount',0,10, 1);" />
-                                                        <input id="amount" type="text" value="1" />
-                                                        <input type="button" value="-" onClick="change('amount',0,10,-1);" />
+                                                    <div class="number change">
+                                                        <button class="plus">+</button>
+                                                        <input class="amount" type="text" value="1" size="5" />
+                                                        <button class="minus">-</button>
                                                     </div>
                                                 </form>
                                             </div>
                                             <div class="col-md-12 text-center">
-                                                <h4>Total Price: <strong id="total">100$</strong></h4>
+                                                <h4>Total Price: <strong class="total">100$</strong></h4>
                                                 <button type="button" class="btn bg-warning text-white m-3 pl-4 pr-4 pt-2 pb-2">Add
                                                     to
                                                     card</button>
@@ -232,75 +238,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-    </div>
-
-
-    <script type="text/javascript">
-
-        const prices = {
-            101: {
-                "small: green": 100,
-                "small: red": 150,
-                "medium: green": 200,
-                "medium: red": 250,
-                "large: green": 300,
-                "large: red": 350,
-            },
-            102: {
-                "small: green": 100,
-                "small: red": 150,
-                "medium: green": 200,
-                "medium: red": 250,
-                "large: green": 300,
-                "large: red": 350,
-            },
-            103: {
-                "small: green": 100,
-                "small: red": 150,
-                "medium: green": 200,
-                "medium: red": 250,
-                "large: green": 300,
-                "large: red": 350,
-            }
-        };
-
-        $(document).ready(function () {
-            $(".add").click(function () {
-                number = $(this).attr("id");
-                $("[name='selected-product']").val(number)
-            })
-            $("select").change(recalc);
-        });
-
-        function recalc() {
-
-            let
-                size = $('.show .size').val(),
-                color = $('.show .color').val(),
-                number = $("[name='selected-product']").val(),
-                amount = $('.show .amount').val();
-                let s1 =`${size}: ${color}`;
-                let s2 = "small: red";
-                total = prices[number][`${size}: ${color}`] * amount;
-
-            $('.show .total').text(`${total} р.`);
-
-        };
-        
-        $('form').on('change', recalc);
-
-        function change(objName, min, max, step) {
-            var obj = $(objName);
-            var tmp = +obj.value + step;
-            if (tmp < min) tmp = min;
-            if (tmp > max) tmp = max;
-            obj.value = tmp;
-            recalc();
-        };
-    </script>
 </body>
 
 </html>
