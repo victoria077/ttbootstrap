@@ -71,7 +71,7 @@ function req() {
     jsonData = { 'productId': number1, 'color': color1, 'size': size1, 'quantity': amount1 };
 
     $.ajax({
-        url: 'users.php',
+        url: 'http://urlexample',
         type: 'POST',
         contentType: 'application/json',
         dataType: 'json',
